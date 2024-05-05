@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.conteiner {
+    max-height: 550px;
+    overflow: auto;
+    border: 2px solid #adaaaa;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background: #e4e3e3;
+}
+
+.block {
+    display: inline-block;
+    max-width: 290px;
+    padding: 20px;
+    margin: 8px 8px 8px 3px;
+    border: 1px solid #d4d4d4;
+    border-radius: 30px;
+    background: rgb(189, 166, 128);
+    box-shadow: 0 0 10px 2px #8e8d8d inset;
+}
