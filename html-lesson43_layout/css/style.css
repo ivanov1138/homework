@@ -1,0 +1,298 @@
+body {
+    background: #181E34;
+    color: #ffffff;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    line-height: 150%;
+}
+
+.conteiner {
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+main, footer {
+    border-bottom: 1px solid #323952;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 49px;
+    text-align: center;
+}
+
+h3, h4 {
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* =========================== Header ================================ */
+
+.header {
+    padding: 30px 0 36px;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+}
+
+.header-list {
+    display: flex;
+}
+
+.header-item {
+    margin-right: 30px;
+}
+
+.hover:hover {
+    color: #01A2CB;
+}
+
+.header-nav {
+    margin-left: auto;
+}
+
+.header-buttton {
+    font-weight: 500;
+    padding: 14px 30px;
+    border-radius: 100px;
+    background: #ffffff;
+    color: #2766AE;
+}
+
+/* ======================= Main (hero) ================ */
+
+.hero {
+    background: url("../img/hero-bg.jpg") 10% 50% / cover no-repeat;
+    padding: 120px 0;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 436px;
+    margin-right: auto;
+}
+
+.p {
+    padding-bottom: 15px;
+    font-weight: 400;
+}
+
+.hero-span {
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #01A2CB
+}
+
+.hero-btn-conteiner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+}
+
+.hero-btn {
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    padding: 18px 30px;
+    margin-bottom: 10px;
+    height: 56px;
+    background: linear-gradient(180deg, #00a4cc 0%, #2766ae 100%);
+}
+
+.hero-btn-conteiner a:nth-child(2) {
+    background: linear-gradient(129deg, #00a4cc 0%, #2766ae 100%);
+}
+
+.hero-btn svg {
+    margin-left: 4px;
+}
+
+/* ======================= Section (Main) ============================ */
+
+.main-inner {
+    display: flex;
+    margin: 120px 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-team {
+    text-align: center;
+    max-width: 513px;
+    margin-bottom: 60px;
+}
+
+.main-team p {
+    padding: 15px 0 0;
+}
+
+.main-baners {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -28px;
+    padding-bottom: 30px;
+}
+
+.main-block {
+    border: 2px solid #176bae;
+    border-radius: 16px;
+    box-shadow: 4px 4px 13px 0px #050d29c2;
+    background: #197cb8;
+    padding: 28px 26.7px;
+    margin-bottom: 28px;
+}
+
+.inner-main-block {
+    text-align: center;
+    max-width: 144px;
+    max-height: 48px;
+    margin-top: 10px;
+}
+
+.main-btn-conteiner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 436px;
+}
+
+.main-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    padding: 18px 30px;
+    border-radius: 100px;
+    background: linear-gradient(180.00deg, #00a4cc, #2766ae 100%);
+}
+
+/* ============= Footer ================= */
+
+.footer-inner {
+    display: flex;
+    margin: 60px 0 41px;
+}
+
+.footer-text {
+    max-width: 267px;
+    margin-right: 197px;
+}
+
+.footer-menu {
+    display: flex;
+    min-width: 347px;
+    justify-content: space-between;
+}
+
+.footer-text p {
+    margin-top: 15px;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.footer-item {
+    margin: 10px 0px 0px;
+}
+
+/* ================ Teacher's cards ============= */
+
+.cards {
+    padding: 120px 0;
+}
+
+.cards-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.cards-text {
+    text-align: center;
+    max-width: 513px;
+    margin: 0 auto 60px;
+}
+
+.cards-flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 0 -14px; */
+    margin-bottom: -28px;
+    padding-bottom: 30px;
+    margin-right: -36px;
+}
+
+.cards-flex-item {
+    margin-bottom: 28px;
+    margin-right: 27px;
+    flex: 0 0 22%; /* Уменьшил процент, занимаемый карточкой в блоке */
+}
+
+.cards-flex-inner {
+    background: #197CB8;
+    border: 2px solid #176BAE;
+    box-shadow: 4px 4px 13px rgba(5, 13, 41, 0.76);
+    border-radius: 16px;
+    padding: 28px 28px;
+}
+
+.cards-flex-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.cards-flex-text {
+    text-align: center;
+}
+
+.cards-button {
+    display: block;
+    border-radius: 100px;
+    padding: 18px 30px;
+    background: linear-gradient(180deg, #00A4CC 0%, #2766AE 100%);
+    text-align: center;
+    max-width: 436px;
+    margin: 0 auto;
+}
