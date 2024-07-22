@@ -358,22 +358,23 @@ body {
 }
 
 .fotter__inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: reapit(3, 1fr);
 }
 
 .fotter__information {
+    grid-area: 1 / 2 / 2 / 3;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     width: 100%;
-    margin-left: 150px;
 }
 
 .footter__social {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: end;
     gap: 15px;
     height: 20px;
 }
