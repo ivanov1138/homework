@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.btn {
+    margin: 6px;
+    padding: 6px 12px;
+    font-weight: 500;
+    font-size: 20px;
+    color: bisque;
+    background-color: rgb(91, 91, 251);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+/* ====================================================================================== */
+
+.text {
+    display: inline-block;
+    transition: all 1s;
+}
+
+.move {
+    transform: translateX(10vw);
+}
+
+.red {
+    color: red;
+    font-size: 26px;
+}
+/* ======================================================================================== */
+
+.conteiner {
+    position: relative;
+    margin: 50px 0;
+    padding: 10px;
+    height: 500vh;
+}
+
+.circle::before {
+    position: fixed;
+    display: block; /*  Нужно сделать элемент блочным, т.к. для него прописываем размеры и они не сработают, если элемент останется инлайновым */ 
+    content: '';
+    background-color: #00ffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+
+
+}
+
+.large-circle::before {
+    display: block; 
+    content: '';
+    background-color: #a1f7f7;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
