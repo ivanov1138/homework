@@ -16,7 +16,7 @@ close.addEventListener('click', () => {
     if (!body.classList.contains('body--opened-menu')) {
         body.classList.add('body--opened-menu');
     } else {
-        body.classList.add('body--closed-menu');
+       // body.classList.add('body--closed-menu');
         body.classList.remove('body--opened-menu');
     }
 })
