@@ -4,15 +4,24 @@ const bodyOpenedMenu = document.querySelector('.body--opened-menu');
 const windowWidth = window.innerWidth;
 let navLink = document.querySelector('.nav__link');
 
-if (window.innerWidth <= windowWidth) { /* Проверяю ширину экрана */
-    body.classList.add('body--opened-menu');
-}
+// if (window.innerWidth < 900) { /* Проверяю ширину экрана */
+//     body.classList.add('body--opened-menu');
+// }
+
+// close.addEventListener('click', () => {
+//     if (body.classList.contains('body--opened-menu')) {
+//         body.classList.remove('body--opened-menu');
+//     } else {
+//         body.classList.add('body--opened-menu');
+//     }
+// })
 
 close.addEventListener('click', () => {
-    if (body.classList.contains('body--opened-menu')) {
-        body.classList.remove('body--opened-menu');
-    } else {
+    if (!body.classList.contains('body--opened-menu')) {
         body.classList.add('body--opened-menu');
+    } else {
+        body.classList.add('body--closed-menu');
+        body.classList.remove('body--opened-menu');
     }
 })
 
