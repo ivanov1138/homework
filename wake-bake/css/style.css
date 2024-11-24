@@ -119,7 +119,7 @@
     opacity: 1;
 }
 
-                                                /* - Burger - */
+/* - Burger - */
 .burger-icon {
     display: block;
     display: none;
@@ -162,13 +162,15 @@
 
 /* Скрывембургер, показываем крестик */
 .body--opened-menu .burger-icon span {
-    background-color: transparent; /* Бесцветный */
+    background-color: transparent;
+    /* Бесцветный */
 }
 
 .body--opened-menu .burger-icon span::before {
     top: 0px;
     transform: rotate(45deg);
 }
+
 .body--opened-menu .burger-icon span::after {
     bottom: 0px;
     transform: rotate(-45deg);
@@ -297,21 +299,31 @@
         font-size: 24px;
 
         /* Скрывваем меню */
-        transform: translateY(-50%);/* Создает выкатывающееся меню */
-        opacity: 0; /* Делает анимаию (меню будет плавно проявлятся) */
-        visibility: hidden; /* Скрывает меню с экрана */
+        transform: translateY(-50%);
+        /* Создает выкатывающееся меню */
+        opacity: 0;
+        /* Делает анимацию (меню будет плавно проявлятся) */
+        visibility: hidden;
+
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body--opened-menu .nav {
+        transform: translateY(0%);
+        /* Создает выкатывающееся меню */
+        opacity: 1;
+        /* Делает анимаию (меню будет плавно проявлятся) */
+        visibility: visible;
+        /* Отображает  меню на экране */
         transition: all .4s;
     }
 
-.nav__list {
-    flex-direction: column;
-    align-items: center;
-}
-
-    .body--opened-menu .nav {
-        transform: translateY(0%);/* Создает выкатывающееся меню */
-        opacity: 1; /* Делает анимаию (меню будет плавно проявлятся) */
-        visibility: visible; /* Отображает  меню на экране */
+    .body--closed-menu .nav {
+        transition: all .4s;
     }
 
     .burger-icon {
