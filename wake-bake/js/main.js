@@ -8,9 +8,9 @@ let navLink = document.querySelector('.nav__link');
 //     body.classList.remove('body--opened-menu');
 // }
 
-if (body.classList.contains('body--opened-menu')) {
-    body.classList.remove('body--opened-menu');
-}
+//if (body.classList.contains('body--opened-menu')) {
+//    body.classList.remove('body--opened-menu');
+//}
 
 close.addEventListener('click', () => {
     if (!body.classList.contains('body--opened-menu')) {
