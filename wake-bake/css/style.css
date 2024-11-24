@@ -304,6 +304,7 @@
         opacity: 0;
         /* Делает анимацию (меню будет плавно проявлятся) */
         visibility: hidden;
+        transition: all .4s;
 
     }
 
