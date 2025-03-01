@@ -400,7 +400,7 @@
 .accordion-content__icon {
     width: 24px;
     height: 24px;
-    border: 1px Fsolid #CEAAD0;
+    border: 1px solid #CEAAD0;
     border-radius: 50%;
     display: inline-flex;
     /* Чтобы иконка расположилась правильно в строку */
