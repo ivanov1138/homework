@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wake & Bake</title>
     <link rel="shortcut icon" href="./img/icons/logos/logo-light.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/reset.css">
+    <!-- <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -717,6 +718,82 @@
                 </div>
             </section>
 
+            <section class="main__gallary gallary">
+                <div class="conteiner">
+                    <div class="gallary__inner">
+                        <div class="gallary__img">
+                            <img src="./img/decor/cupcakes.png" alt="">
+                            <!-- alt не заполняем, т.к. это декоративое изображение -->
+                        </div>
+                        <div class="gallary__content">
+                            <div class="gallary__info">
+                                <h2 class="gallary__title title">
+                                    Фотогалерея
+                                </h2>
+                                <p class="gallary__text">
+                                    Для комфортного обучения сделаны просторные аудитории, где предоставляется
+                                    всё необходимое оборудование. Здесь наши ученики создают кулинарные шедевры
+                                    под присмотром опытных наставников
+                                </p>
+                            </div>
+                            <div class="gallary__nav">
+                                <!-- navigation buttons -->
+                                <button class="gallary__prev" type="button">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.51202 1.03707L2.53602 7.01307L8.51202 12.9891L7.50402 13.9971L0.52002 7.01307L7.50402 0.0290698L8.51202 1.03707Z"
+                                            fill="#FFA55C" />
+                                        <path d="M1.52783 7.7168L1.52783 6.2768L13.7678 6.2768V7.7168L1.52783 7.7168Z"
+                                            fill="#FFA55C" />
+                                    </svg>
+                                </button>
+                                <div class="gallary__pagination"></div>
+                                <button class="gallary__next" type="button">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.77607 12.9756L11.7521 6.99962L5.77607 1.02363L6.78407 0.0156247L13.7681 6.99962L6.78407 13.9836L5.77607 12.9756Z"
+                                            fill="#FFA55C" />
+                                        <path
+                                            d="M12.7598 6.28027L12.7598 7.72027L0.519766 7.72027L0.519766 6.28027L12.7598 6.28027Z"
+                                            fill="#FFA55C" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallary__slider swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="gallary__wraper swiper-wrapper">
+                            <!-- Slides -->
+                            <a class="gallary__slide swiper-slide"  data-fslightbox="gallery" href="./img/content/galery/1.jpeg">
+                                <img src="./img/content/galery/1.jpeg" alt="девушка декорирует торт">
+                            </a>
+                            <a class="gallary__slide swiper-slide"  data-fslightbox="gallery" href="./img/content/galery/2.jpeg">
+                                <img src="./img/content/galery/2.jpeg" alt="девушка декоирует капкейки">
+                            </a>
+                            <a class="gallary__slide swiper-slide"  data-fslightbox="gallery" href="./img/content/galery/3.jpeg">
+                                <img src="./img/content/galery/3.jpeg" alt="девушка с шоколадным декором">
+                            </a>
+                            <a class="gallary__slide swiper-slide"  data-fslightbox="gallery" href="./img/content/galery/4.jpeg">
+                                <img src="./img/content/galery/4.jpeg" alt="три девушки декорируют торты">
+                            </a>
+                            <a class="gallary__slide swiper-slide"  data-fslightbox="gallery" href="./img/content/galery/3.jpeg">
+                                <img src="./img/content/galery/3.jpeg" alt="девушка с шоколадным декором">
+                            </a>
+                            <a class="gallary__slide swiper-slide"  data-fslightbox="gallery" href="./img/content/galery/4.jpeg">
+                                <img src="./img/content/galery/4.jpeg" alt="три девушки декорируют торты">
+                            </a>
+                            <a class="gallary__slide swiper-slide"  data-fslightbox="gallery" href="./img/content/galery/3.jpeg">
+                                <img src="./img/content/galery/3.jpeg" alt="девушка с шоколадным декором">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <footer class="footer">
@@ -905,6 +982,7 @@
     </div>
 
     <script src="./js/fslightbox.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

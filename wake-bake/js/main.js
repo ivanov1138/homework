@@ -89,7 +89,7 @@
         const tabContent = document.querySelector(tabContentId);
         const activControl = document.querySelector('.tab-controls__link--active');
         const activContent = document.querySelector('.tab-content--show');
-        
+
         if (activControl) { /* Если есть этот элемент, т только тогда отменяем его класс, это проверка на всякий случай если в дальнейшем кто то удалит класс или захочет чтобы таб был скрыт */
             activControl.classList.remove('tab-controls__link--active');
         }
@@ -136,5 +136,44 @@
     })
 
 
+    /* =========== Слайдер-галерея ============== */
 
+    const swiper = new Swiper('.gallary__slider', {
+        spaceBetween: 15, /* расстояние между слайдами */
+        slidesPerView: 1.5, /* кол-во вдимых слайдов за раз */
+
+        // If we need pagination
+        pagination: {
+            el: '.gallary__pagination',
+            type: 'fraction',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.gallary__next',
+            prevEl: '.gallary__prev',
+        },
+
+        /* Адаптив слайдера через брэйкпоинтс */
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 601px
+            601: {
+                spaceBetween: 32,
+                slidesPerView: 3,
+            },
+
+            // when window width is >= 801px
+            801: {
+                spaceBetween: 32,
+                slidesPerView: 4,
+            },
+
+            // when window width is >= 1101px
+            1101: {
+                slidesPerView: 4,
+            }
+        }
+    });
 })()

@@ -1,0 +1,120 @@
+/* ================= Footer ============================ */
+
+.footer {
+    color: var(--general-bg);
+    background: #AB8261;
+    padding: 60px 0 66px;
+    /* Все колонки в футере оступают от верха на 60px */
+}
+
+.footer__inner {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: .9fr .9fr 1.1fr auto;
+    /* auto прижмет крайнюю правую колонку к правому краю контейнера */
+    gap: 40px 15px;
+}
+
+.footer__col:first-child {
+    /* Первая колонка в футере отступает от верха меньше остальных, только на 30px */
+    margin-top: -30px;
+}
+
+.footer__logo {
+    display: block;
+    max-width: 240px;
+}
+
+.footer__logo img {
+    width: 100%;
+}
+
+.footer__logo-text {
+    margin-bottom: 20px;
+}
+
+.footer__col-list {
+    margin-top: -5px;
+    /* чтобы компенсировать установленный в footer__col-link паддинг для расширения области кликабельности */
+}
+
+.footer__col-item {
+    margin-bottom: 10px;
+}
+
+.footer__col-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__col-link {
+    display: block;
+    padding: 5px 0;
+    /* для того чтобы расширить область кликабельности ссылки. Эти паддинги суммируются, т.е. между ссылками будет 10px, а по макету должо быть 20, поэтому в footer__col-item делаем margin = 10px  */
+    position: relative;
+    z-index: 1;
+}
+
+.footer__col-link::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -13px;
+    z-index: -1;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--accent-color);
+
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.footer__col-link:hover::before {
+    opacity: 1;
+}
+
+.footer__contact-item {
+    margin-bottom: 10px;
+}
+
+.footer__contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__col-tel {
+    margin-bottom: 47px;
+}
+
+.footer__col-number {
+    display: block;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+.footer__col-number:hover {
+    color: var(--accent-color);
+}
+
+.footer__col-copy {
+    color: #DEC5B1;
+}
+
+.socials {
+    line-height: 0;
+}
+
+.socials__list {
+    display: flex;
+    gap: 15px;
+}
+
+.socials__link path {
+    transition: var(--transition);
+}
+
+.socials__link:hover path {
+    fill: var(--accent-color);
+}
+
