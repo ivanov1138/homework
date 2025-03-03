@@ -455,7 +455,8 @@
 
 .gallary__nav {
     display: flex;
-    gap: 98px; /*  Отступ между стрелками и паинацией */
+    gap: 98px;
+    /*  Отступ между стрелками и паинацией */
     align-items: center;
     font-family: "Gabriola";
     font-size: 42px;
@@ -500,7 +501,7 @@
 
 .swiper-button-disabled.gallary__prev:hover path,
 .swiper-button-disabled.gallary__next:hover path {
-    fill:  #E1D9E1;
+    fill: #E1D9E1;
 }
 
 .gallary__next path,
@@ -521,7 +522,8 @@
 .gallary__prev {}
 
 .gallary__pagination {
-    display: flex; /* чтобы не было пробелов между цифррами и слэшем */
+    display: flex;
+    /* чтобы не было пробелов между цифррами и слэшем */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -547,6 +549,191 @@
 .gallary__slide img {
     width: 100%;
     /* Чтоы картинка слушалась размера своео родителя  .gallary__slide */
+}
+
+
+
+/* =============== Отзывы ========================= */
+
+
+.testimonials {}
+
+.testimonials__inner {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.testimonials__info {
+    max-width: 632px;
+}
+
+.testimonials__title {
+    margin-bottom: 20px;
+}
+
+.testimonials__text {}
+
+.testimonials__nav {
+    display: flex;
+    gap: 30px;
+    /*  Отступ между стрелками и пагинацией */
+    align-items: center;
+    font-family: "Gabriola";
+}
+
+.testimonials__prev,
+.testimonials__next {
+    background: transparent;
+    /* прозрачный бэкраунд */
+    cursor: pointer;
+    border: 1.5px solid var(--accent-color);
+    border-radius: 50%;
+    flex-shrink: 0;
+    /* чтоы кнопки не сжимались */
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: var(--transition);
+}
+
+.swiper-button-disabled.testimonials__prev,
+.swiper-button-disabled.testimonials__next {
+    border: 1.5px solid #E1D9E1;
+    cursor: auto;
+}
+
+.swiper-button-disabled.testimonials__prev path,
+.swiper-button-disabled.testimonials__next path {
+    fill: #E1D9E1;
+}
+
+.swiper-button-disabled.testimonials__prev:hover,
+.swiper-button-disabled.testimonials__next:hover {
+    background: transparent;
+}
+
+.swiper-button-disabled.testimonials__prev:hover path,
+.swiper-button-disabled.testimonials__next:hover path {
+    fill: #E1D9E1;
+}
+
+.testimonials__next path,
+.testimonials__prev path {
+    transition: var(--transition);
+}
+
+.testimonials__next:hover,
+.testimonials__prev:hover {
+    background: var(--accent-color);
+}
+
+.testimonials__next:hover path,
+.testimonials__prev:hover path {
+    fill: var(--general-bg);
+}
+
+.testimonials__slider {
+    overflow: visible;
+    /* Чтобы неактивные слайды отображались за пределами conteiner */
+}
+
+.testimonials__wrapper {
+    margin-bottom: 40px;
+}
+
+.testimonials__slide {
+    background: var(--accent-bg);
+    border-radius: var(--border-radius);
+    padding: 30px 30px 40px;
+    display: flex;
+    gap: 30px;
+    height: auto;
+    /* Чтобы флекс контейнер был по высоте как врапер, не зависимо от количества контента */
+
+    transition: var(--transition);
+}
+
+.swiper-slide-prev.testimonials__slide,
+.swiper-slide-next.testimonials__slide {
+    opacity: 0.5;
+    /*  Не активные слайды удут иметь прозрачность */
+}
+
+.testimonials__slide.swiper-slide {
+    transform: scale(.9);
+    /* Кода слайд не активный он меньше активного*/
+}
+
+.swiper-slide-active.testimonials__slide {
+    /* когда слайд активный */
+    transform: scale(1);
+    /* обычны размер, он удет больше остальных не активных слайдов */
+    opacity: 1;
+    /* Активный слайд не прозрачный */
+}
+
+.swiper-slide {}
+
+.testimonials__student {
+    max-width: 165px;
+    flex-shrink: 0;
+    /* Чтоы блок неcжимался и был 165px */
+    text-align: center;
+}
+
+.testimonials__sudent-img {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    /* Чтобы изоражение внутри обрезалось по размеру этого контейнера, а не выходило как бы за его пределы */
+    margin-bottom: 20px;
+}
+
+.testimonials__sudent-img img {
+    width: 100%;
+}
+
+.testimonials__student-name {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5px;
+    line-height: 1.6;
+    color: var(--accent-text);
+}
+
+.testimonials__student-inst {
+    margin: 0 auto;
+    color: #CEAAD0;
+}
+
+.testimonials__quote {}
+
+.testimonials__quote span {
+    display: block;
+    font-family: "Gabriola";
+    font-size: 32px;
+    line-height: .9;
+    color: var(--accent-text);
+    margin-bottom: 10px;
+}
+
+.testimonials__scrollbar {
+    background: var(--accent-bg);
+}
+
+.testimonials__scrollbar.swiper-scrollbar {
+    position: static;
+    width: 100%;
+    height: 7px;
+}
+
+.testimonials__scrollbar .swiper-scrollbar-drag {
+    background: var(--accent-color);
 }
 
 
@@ -682,6 +869,13 @@
         display: none;
     }
 
+    /* --------------- Отзывы -------------------- */
+
+    .testimonials__scrollbar.swiper-scrollbar {
+        width: 50%;
+        margin: 0 auto; /* центрируем скролбар */
+    }
+
     /* ------------------------------------------------ */
 
     .footer__inner {
@@ -768,6 +962,17 @@
     .accordion-content__text {
         max-width: none;
     }
+
+    /* ----------- Отзывы ------------------- */
+
+    .testimonials__inner {
+        align-items: stretch; /* Будет выравноваться по левому краю */
+        flex-direction: column;
+    }
+
+    .testimonials__nav {
+        align-self: end;
+    }
 }
 
 @media (max-width: 600px) {
@@ -777,7 +982,8 @@
     }
 
     .main__program,
-    .main__gallary {
+    .main__gallary,
+    .main__testimonials {
         padding: 0 0 80px;
     }
 
@@ -864,6 +1070,18 @@
     .gallary__inner {
         margin-bottom: 20px;
     }
+
+    /* -------------  Отзывы ---------------- */
+
+    .testimonials__inner {
+        margin-bottom: 20px;
+    }
+
+    .testimonials__slide {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 450px) {
@@ -900,5 +1118,11 @@
 
     .accordion-content__item {
         margin-bottom: 10px;
+    }
+
+    /* ---------- Отзывы ---------------- */
+
+    .testimonials__slide {
+        padding: 30px 10px 30px;
     }
 }

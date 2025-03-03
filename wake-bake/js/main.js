@@ -176,4 +176,41 @@
             }
         }
     });
+
+
+    /* ======== Слайдер Отзывы =============== */
+
+    new Swiper('.testimonials__slider', {
+        spaceBetween: 0, /* расстояние между слайдами */
+        slidesPerView: 1, /* кол-во вдимых слайдов за раз */
+        centeredSlides: true, /* Активный слаййд будет размещаться по центрру страницы */
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.testimonials__next',
+            prevEl: '.testimonials__prev',
+        },
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true, /* параметр позволяяеет "схватиться за сам сколар и перемещать его" */
+        },
+
+
+        /* Адаптив слайдера через брэйкпоинтс */
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 901px
+            901: {
+                slidesPerView: 1.5,
+            },
+
+            // when window width is >= 1201px
+            1201: {
+                slidesPerView: 2.1,
+            }
+        }
+
+    });
+
 })()
