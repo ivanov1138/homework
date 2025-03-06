@@ -70,7 +70,7 @@
     position: absolute;
     inset: 5px;
     /* Задаем равномерный отступ со всех сторон, это тоже самое как рописать все top, right, botom, left с одинаковыми значениями */
-    border: 1px solid #CEAAD0;
+    border: 1px solid var(--accent-color-2);
     border-radius: 50%;
 
     opacity: 0;
@@ -210,7 +210,7 @@
 .program__price-text {
     line-height: 1.6;
     text-transform: uppercase;
-    color: #CEAAD0;
+    color: var(--accent-color-2);
     margin-bottom: 5px;
 }
 
@@ -382,7 +382,7 @@
 .accordion-content__title {
     text-transform: uppercase;
     line-height: 1.6;
-    color: #CEAAD0;
+    color: var(--accent-color-2);
     padding-bottom: 20px;
 }
 
@@ -400,7 +400,7 @@
 .accordion-content__icon {
     width: 24px;
     height: 24px;
-    border: 1px solid #CEAAD0;
+    border: 1px solid var(--accent-color-2);
     border-radius: 50%;
     display: inline-flex;
     /* Чтобы иконка расположилась правильно в строку */
@@ -708,7 +708,7 @@
 
 .testimonials__student-inst {
     margin: 0 auto;
-    color: #CEAAD0;
+    color: var(--accent-color-2);
 }
 
 .testimonials__quote {}
@@ -735,6 +735,148 @@
 .testimonials__scrollbar .swiper-scrollbar-drag {
     background: var(--accent-color);
 }
+
+
+/*  -------------- Контактная форма ------------------- */
+
+.contact {
+    padding: 140px 0;
+    background: url("../img/decor/bg-contact.png") 50% 0% / cover no-repeat;
+    /* 50% по x чтобы при уменьшени экрана бэкграунд всегда был по центру, 100% по у чтобы при уменьшении экрана снизу всегда был виден изгиб */
+}
+
+.contact__inner {
+    display: flex;
+    align-items: end;
+    gap: 84px;
+    position: relative;
+}
+
+.contact__img::before {
+    content: url('../img/decor/berries.png');
+    position: absolute;
+    top: -4%;
+    left: 0%;
+}
+
+.contact__img::after {
+    content: url('../img/decor/berries-2.png');
+    position: absolute;
+    top: 4%;
+    right: 0%;
+}
+
+.contact__img img {
+    width: 100%;
+    filter: drop-shadow(0 4px 30px rgba(198, 176, 161, 0.3)); /* Тень для картинки, используется filter, когда сложная png фигура рисунка и нужно создать тень только для рисунка */
+}
+
+.contact__body {
+    max-width: 420px;
+}
+
+.contact__title {
+    margin-bottom: 20px;
+}
+
+.contact__text {
+    margin-bottom: 40px;
+}
+
+.contact__form {
+}
+
+.contact__label {
+    margin-bottom: 10px;
+}
+
+.contact__input {
+    display: block;
+    /* т.к. тег input строчный делаем его блочным */
+    width: 100%;
+    /* Делаем его на ширину своео родителя, т.е. на ширину form */
+    background: #00000000;
+    /* Прозрачный бэкграунд */
+    border: 1px solid var(--input-color);
+    border-radius: 100px;
+    padding: 19px 42px 19px 28px;
+    font-size: 16px;
+    color: var(--generl-text);
+    margin-bottom: 20px;
+
+    transition: var(--transition);
+}
+
+.contact__input:hover {
+    border-color: var(--accent-color);
+}
+
+.contact__input::placeholder {
+    color: var(--input-color);
+    /* Цвет плэйсхолдера в поле инпут */
+    transition: var(--transition);
+}
+
+.contact__input:hover::placeholder {
+    /* Ховер эффект для плэйсхолдера поля инпута */
+    color: var(--accent-color);
+}
+
+.contact__check-label {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    max-width: 288px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.contact__check-label a {
+    text-decoration: underline; /* подчеркивание ссылки */
+    transition: var(--transition);
+}
+
+.contact__check-label a:hover {
+    color: var(--accent-color);
+}
+
+.contact__checkbox {
+    appearance: none; /* Отключает деволтный внешний вид чтобы можно было задать свои стили */
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--input-color);
+    border-radius: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+
+    transition: var(--transition);
+}
+
+.contact__checkbox::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* астягивает элемент со всех сторон */
+    background: url("../img/icons/check.svg") 50% 50% no-repeat;
+    opacity: 0; /* Скрыта */
+
+    transition: var(--transition);
+
+}
+
+.contact__checkbox:hover {
+    border: 1.5px solid var(--accent-color);
+}
+
+.contact__checkbox:checked { /* внешний вид галочки, когда нажал чекбокс */
+    background: var(--accent-color);
+    border: 1.5px solid var(--accent-color);
+}
+
+.contact__checkbox:checked::before {
+    opacity: 1;
+}
+
 
 
 
@@ -764,6 +906,16 @@
 
     .tab-controls {
         flex-wrap: wrap;
+    }
+
+
+    /* -------------- Контактная секция ------------------ */
+
+    .contact__img::after {
+        content: url('../img/decor/berries-2.png');
+        position: absolute;
+        top: -20%;
+        right: 0%;
     }
 
     /* --------------------------------------------------- */
@@ -802,6 +954,13 @@
     .accordion-content {
         gap: 30px;
     }
+
+    /* ------------- Контактная секция ----------------- */
+    .contact__inner {
+        align-items: center;
+        gap: 30px;
+    }
+    
 }
 
 @media (max-width: 900px) {
@@ -874,6 +1033,16 @@
     .testimonials__scrollbar.swiper-scrollbar {
         width: 50%;
         margin: 0 auto; /* центрируем скролбар */
+    }
+
+    /* ------------ Контактная секция ----------------- */
+
+    .contact__inner {
+        justify-content: center;
+    }
+
+    .contact__img img {
+        display: none;
     }
 
     /* ------------------------------------------------ */
@@ -972,6 +1141,12 @@
 
     .testimonials__nav {
         align-self: end;
+    }
+
+    /* ------------- Контактная секция ------------- */
+
+    .contact__img::before {
+        display: none;
     }
 }
 
@@ -1080,6 +1255,17 @@
     .testimonials__slide {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+    }
+
+    /* ---------- Контактная секция ------------ */
+
+    .contact {
+        padding-bottom: 80px;
+    }
+
+    .contact__title,
+    .contact__text {
         text-align: center;
     }
 }

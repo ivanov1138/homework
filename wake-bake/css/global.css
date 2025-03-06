@@ -4,6 +4,8 @@
     --general-bg: #FFF9F4;
     --accent-bg: #FFE0CB;
     --accent-color: #FFA55C;
+    --accent-color-2: #CEAAD0;
+    --input-color: #AC907A;
     --transition: all .4s;
     --border-radius: 20px;
 }
@@ -132,7 +134,7 @@
 
 .modal__cancel:hover path,
 .modal__cancel:hover rect {
-    stroke: #AC907A;
+    stroke: var(--input-color);
 }
 
 .modal__img {
@@ -167,7 +169,7 @@
     position: absolute;
     top: 12px;
     left: 28px;
-    color: #AC907A;
+    color: var(--input-color);
     font-size: 11px;
 
     opacity: 0;
@@ -184,7 +186,7 @@
     /* Делаем его на ширину своео родителя, т.е. на ширину form */
     background: #00000000;
     /* Прозрачный бэкграунд */
-    border: 1px solid #AC907A;
+    border: 1px solid var(--input-color);
     border-radius: 100px;
     padding: 19px 42px 19px 28px;
     font-size: 16px;
@@ -198,7 +200,7 @@
 }
 
 .field__input::placeholder {
-    color: #AC907A;
+    color: var(--input-color);
     /* Цвет плэйсхолдера в поле инпут */
     transition: var(--transition);
 }
