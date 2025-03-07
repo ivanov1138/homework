@@ -1145,6 +1145,10 @@
 
     /* ------------- Контактная секция ------------- */
 
+    .contact__inner {
+    gap: 0;
+    }
+
     .contact__img::before {
         display: none;
     }
