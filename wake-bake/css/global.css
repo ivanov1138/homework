@@ -10,6 +10,11 @@
     --border-radius: 20px;
 }
 
+html {
+    scroll-behavior: smooth; /* Плавная прокрутка страницы при срабатывании якоря */
+    scroll-padding-top: 5vw; /* Отступ от верха блока при скроле по якорю */
+}
+
 .body {
     font-family: "Montserrat", "Arial", sans-serif;
     line-height: 1.5;

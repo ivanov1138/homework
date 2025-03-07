@@ -118,6 +118,7 @@
 
             const accordionControl = e.target.closest('.accordion-list__control'); /* Получаю тот элемент, на который кликнули */
             if (!accordionControl) return;
+            e.preventDefault();
             const accordionItem = accordionControl.parentElement; /* Записываем в пременную элемент на котором кликнули на кнопку, т.е. непоссредственно кликнутый аккордион, т.е. находим accordion-list__item на котором кликнули кноку accordion-list__control*/
             const accordionContent = accordionControl.nextElementSibling; /* Это свойство  выбирает следующий элемент после кнопки. Записываем в переменную контент аккордиона, т.е. nextElementSibling - элемент, следующий за accordionItem это у нас кнопка, поэтому очень важна последовательность элементов в html структуре, сперва идет <button class="accordion-list__control"> затем <div class="accordion-list__content"> */
 
