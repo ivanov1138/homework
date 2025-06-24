@@ -1,0 +1,332 @@
+/* ---------------- Modal window -------------- */
+.modal {
+    position: fixed;
+    /* Позцианируем модальное окно фиксированно */
+    /* inset: 0; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* Растягиваю модальное окно по всему экрану */
+    background: #1e2f23f5;
+    /* Цвет и прозрачность оверлэй */
+    z-index: 11;
+    /* Чтобы сделать не кликабельными все ссылки и кнопки сайта, т.к. у модалки индекс будет выше и она какбы перекроет сайт */
+    padding: 15px;
+
+    display: flex;
+    /* размещаем модалку по центру */
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.body--opened-modal-accaunt .modal,
+.body--opened-modal-shares .modal,
+.body--opened-modal-callme .modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__open-accaunt,
+.modal__shares-download,
+.modal__call-me {
+    position: relative;
+    background: #0E0E12;
+    padding: 60px;
+    max-width: 428px;
+
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background: linear-gradient(#0E0E12, #0E0E12 0) padding-box, linear-gradient(to right, #FF8924, #FFB017) border-box;
+
+    display: none;
+    transition: var(--transition);
+}
+
+.body--opened-modal-accaunt .modal__open-accaunt {
+    display: block;
+}
+
+/* ------------------------------ */
+/* .modal__shares-download {
+    position: relative;
+    background: rgba(75, 151, 47, 0.56);
+    border-radius: 20px;
+    padding: 60px;
+    max-width: 428px;
+    color: #E4864F;
+
+    display: none;
+    transition: all .6s;
+} */
+
+.body--opened-modal-shares .modal__shares-download {
+    display: block;
+}
+
+.field {
+    display: block;
+    position: relative;
+}
+
+.field span {
+    position: absolute;
+    top: 12px;
+    left: 28px;
+    color: var(--hover-color);
+    font-size: 11px;
+
+    opacity: 0;
+    /* Скрываю подсказку она будет видна только при фокусировке на поле инпут, и можно было плавно ее выводить при ховере */
+    visibility: hidden;
+    /* Скрываю возможность нажать на эту подсказку когда она скрыта */
+    transition: var(--transition);
+}
+
+.field__input,
+.contact__input {
+    display: block;
+    /* т.к. тег input строчный делаем его блочным */
+    width: 100%;
+    /* Делаем его на ширину своео родителя, т.е. на ширину form */
+    background: #00000000;
+    /* Прозрачный бэкграунд */
+    border: 4px solid #FFFFFF4A;
+    border-radius: 20px;
+    padding: 19px 42px 19px 28px;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+
+    transition: var(--transition);
+}
+
+.field__input:hover,
+.field__input:focus,
+.contact__input:hover,
+.contact__input:focus {
+    border-color: var(--hover-color);
+}
+
+.field__input::placeholder {
+    transition: var(--transition);
+}
+
+.field__input:hover::placeholder {
+    /* Ховер эффект для плэйсхолдера поля инпута */
+    color: #ffffff9c;
+}
+
+.field__input:focus {
+    padding: 26px 42px 12px 28px;
+}
+
+.field__input:focus+span {
+    /* Делаем подсказку видимой при фокусировке на поле инпут */
+    opacity: 1;
+    visibility: visible;
+}
+
+.field__input:focus::placeholder {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contact__check-label {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    max-width: 288px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.contact__check-label a {
+    text-decoration: underline;
+    /* подчеркивание ссылки */
+    transition: var(--transition);
+}
+
+.contact__check-label a:hover {
+    color: var(--hover-color);
+}
+
+
+.contact__checkbox,
+.contact__checkbox2 {
+    appearance: none;
+    /* Отключает дефолтный внешний вид чтобы можно было задать свои стили */
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #FFFFFF4A;
+    border-radius: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.contact__checkbox2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* растягивает элемент со всех сторон */
+    background: url("../img/icons/check.svg") 50% 50% no-repeat;
+    opacity: 0;
+    /* Скрыта */
+
+    transition: var(--transition);
+}
+
+.contact__checkbox2.checked::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* растягивает элемент со всех сторон */
+    background: url("../img/icons/check.svg") 50% 50% no-repeat;
+    background-color: var(--hover-color);
+    border-radius: 3px;
+    opacity: 1;
+    /* Скрыта */
+
+    transition: var(--transition);
+}
+
+.contact__checkbox:hover,
+.contact__checkbox2:hover {
+    border: 1.5px solid var(--hover-color);
+}
+
+#button__for-gift {
+    font-size: 18px;
+    line-height: 1;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+/* --------------------------------------- */
+
+.body--opened-modal-callme .modal__call-me {
+    display: block;
+}
+
+.modal__blur {
+    position: absolute;
+    top: -10px;
+    left: -26px;
+    width: 107px;
+    height: 107px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #98C269FF, #9EDFB6FF);
+    filter: blur(61px);
+}
+
+.modal__cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal__cancel path,
+.modal__cancel rect {
+    transition: var(--transition);
+}
+
+.modal__cancel:hover path,
+.modal__cancel:hover rect {
+    stroke: var(--hover-color);
+}
+
+.modal__title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.modal__text,
+.modal__main-text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.modal__text a {
+    color: var(--hover-color);
+}
+
+.modal__text-enter,
+.modal__text-registration {
+    transition: all .4s ease;
+}
+
+.modal__text-enter:hover,
+.modal__text-registration:hover {
+    color: #76e9b5;
+}
+
+
+/*    ----------- Modal Cal Me ------------- */
+.modal__call-me {
+    padding: 45px;
+}
+
+.modal__call-me .modal__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact__label--call-me .field__input--massage {
+    width: 100%;
+    height: 100px;
+    border-radius: 12px;
+    font-size: 12px;
+    border: 2px solid #FFFFFF4A;
+
+    transition: var(--transition);
+}
+
+.field__input--massage:hover,
+.field__input--massage:focus {
+    border-color: var(--hover-color);
+}
+
+.field__input--call-me,
+.contact__input--call-me {
+    width: 70%;
+    border: 2px solid #FFFFFF4A;
+    border-radius: 9px;
+    padding: 10px 42px 15px 28px;
+    font-size: 12px;
+    transition: var(--transition);
+}
+
+.contact__checkbox::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* растягивает элемент со всех сторон */
+    background: url("../img/icons/check.svg") 50% 50% no-repeat;
+    opacity: 0;
+    /* Скрыта */
+
+    transition: var(--transition);
+}
+
+.contact__checkbox.checked::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* растягивает элемент со всех сторон */
+    background: url("../img/icons/check.svg") 50% 50% no-repeat;
+    background-color: var(--hover-color);
+    border-radius: 3px;
+    opacity: 1;
+    /* Скрыта */
+
+    transition: var(--transition);
+}
